@@ -99,11 +99,6 @@ const options = {
 			rule: NoHankakuKana
 		},
 		{
-			// 同一単語の連続をチェック
-			ruleId: "ja-no-successive-word",
-			rule: JaNoSuccessiveWord
-		},
-		{
 			// 「さ」の不適切な挿入をチェック
 			ruleId: "no-insert-dropping-sa",
 			rule: NoInsertDroppingSa
@@ -144,11 +139,6 @@ const options = {
 			rule: JaNoOrthographicVariants
 		},
 		{
-			// 常用漢字表や人名用漢字表にない漢字の使用をチェック
-			ruleId: "ja-joyo-or-jinmeiyo-kanji",
-			rule: JaJoyoOrJinmeiyoKanji
-		},
-		{
 			// 不適切な言葉の使用をチェックします
 			ruleId: "ja-no-inappropriate-words",
 			rule: JaNoInappropriateWords
@@ -159,7 +149,7 @@ const options = {
 			rule: JaNoAbusage
 		},
 		{
-			// 「たり」形式の優先使用をチェックします
+			// 例示・並列表現の「～たり、（～たり）する」をチェックするルールです。 次の例のように、片方が「〜たり」表現なのにもかかわらず、もう片方の動詞が「〜たり」ではない場合をエラーとします。
 			ruleId: "prefer-tari-tari",
 			rule: PreferTariTari
 		}
