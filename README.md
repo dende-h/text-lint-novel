@@ -1,26 +1,28 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+この Next.js 製のアプリケーションは、ユーザーインターフェースを持たず、/api/lint への POST リクエストで与えられたプレーンテキストを textlint で校正し、その結果を返す機能を提供します。
 
-First, run the development server:
+Getting Started
+開発サーバーを起動するには以下のコマンドを実行します:
 
-```bash
+bash
+Copy code
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
-```
+開発サーバーが起動したら、ブラウザで http://localhost:3000 にアクセスするとアプリケーションの状態を確認できます。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+pages/index.tsx を編集することでアプリケーションの挙動を変更できます。ファイルを編集すると、ページは自動的に更新されます。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+このアプリケーションでは pages/api ディレクトリが/api/\*にマップされます。このディレクトリ内のファイルは React のページではなく、API routes として扱われます。特に、pages/api/lint.ts が/api/lint エンドポイントにマップされ、textlint を用いたテキスト校正機能を提供します。
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+なお、このプロジェクトは next/font を使用して、カスタム Google フォントである Inter を自動的に最適化してロードします。
 
 ## Learn More
 
@@ -36,3 +38,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Lisence
+
+This project is licensed under the MIT License, see the LICENSE.txt file for details
